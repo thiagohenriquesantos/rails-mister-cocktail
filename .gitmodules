@@ -1,3 +1,6 @@
 [submodule "fullstack-challenges-04-Rails-mister-cocktail-specs"]
 	path = fullstack-challenges-04-Rails-mister-cocktail-specs
 	url = https://github.com/lewagon/fullstack-challenges-04-Rails-mister-cocktail-specs.git
+[submodule "spec"]
+	path = spec
+	url = https://github.com/lewagon/fullstack-challenges-04-Rails-mister-cocktail-specs.git
