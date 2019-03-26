@@ -1,6 +1,12 @@
-<h3>Add a new dose</h3>
-<%= simple_form_for [cocktail, dose] do |f| %>
-  <%= f.association :ingredient, input_html: { class: "beautiful-dropdown" }, include_hidden: false %>
-  <%= f.input :description %>
-  <%= f.button :submit, class: "btn btn-primary" %>
-<% end %>
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/ltCMCZy/an-experimental-cocktail-waiter-makes-a-special-in-a-bar-lounge-in-spain_m1g-5jke8__F0000.png');">
+  <div class="banner-content">
+    <div class="dose-container">
+  <h1>Add Dose</h1>
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.input :description %>
+    <%= f.association :ingredient %>
+  <%= f.submit "Add Dose", class: "btn btn-primary" %>
+  <% end %>
+</div>
+  </div>
+</div>

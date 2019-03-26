@@ -1,23 +1,24 @@
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path 'cocktails.jpg' %>');">
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://wallpaperstream.com/wallpapers/full/cocktails-and-drinks/Nightlife-Cocktail-Bar-Drink-HD-Wallpaper.jpg');">
   <div class="banner-content">
-    <h1>Le Wagon's cocktails</h1>
-    <p>Awesome beverages for developers nightlife</p>
-    <%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-primary btn-lg" %>
+    <h1>Mr.Cocktail</h1>
+    <p>Bring me a Drink <i class="fab fa-itunes-note"></i></p>
+    <div class="btn btn-primary">
+    <%= link_to 'Create your own', new_cocktail_path, :class => "btn" %>
+  </div>
   </div>
 </div>
 <div class="container">
-  <div class="row">
-  <div class="row">
-    <% @cocktails.each do |cocktail| %>
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/500x400/?cocktail');">
+  <h1 class="text-center">Top Drinks <i class="fas fa-star" id="star"></i></h1>
+    <div class="row">
+        <% @cocktails.each do |cocktail| %>
+        <div class="col-xs-12 col-sm-4">
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= cl_image_path(cocktail.photo) if cocktail.photo.present? %>);">
           <div class="card-description">
-            <h2><%= cocktail.name %></h2>
+            <h2><%= cocktail.name %> <i class="fas fa-glass-martini"></i></h2>
           </div>
-          <%= link_to "", cocktail_path(cocktail), class: 'card-link' %>
+          <%= link_to "", cocktail_path(cocktail), class:"card-link" %>
         </div>
       </div>
-    <% end %>
-  </div>
-  </div>
+      <% end %>
+    </div>
 </div>
