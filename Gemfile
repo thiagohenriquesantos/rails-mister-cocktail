@@ -36,6 +36,12 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'autoprefixer-rails'
+
+gem 'jquery-rails'
+gem 'turbolinks'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
